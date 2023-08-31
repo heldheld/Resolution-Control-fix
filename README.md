@@ -2,7 +2,7 @@
 	<img width=256px src="GitHub/logo.png" />
 </p>
 
-# Fix for hi-res filter resetting on reset.
+# Fix for hi-res filter resetting on reset
 
 Fix created by [purple512](https://github.com/UltimateBoomer/Resolution-Control/issues/6#issuecomment-1699998579).
 
