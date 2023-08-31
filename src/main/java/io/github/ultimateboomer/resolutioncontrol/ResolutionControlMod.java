@@ -141,10 +141,12 @@ public class ResolutionControlMod implements ModInitializer {
 		Window window = getWindow();
 		if (framebuffer == null) {
 			this.shouldScale = true; // so we get the right dimensions
-			framebuffer = new WindowFramebuffer(
-					window.getFramebufferWidth(),
-					window.getFramebufferHeight()
-			);
+                        var w = window.getFramebufferWidth();
+                        var h = window.getFramebufferHeight();
+                        framebuffer = new WindowFramebuffer(w, h);
+
+                        // necessary to trigger initFbo() so that scaling algorithm is set correctly
+                        framebuffer.resize(w, h, MinecraftClient.IS_SYSTEM_MAC);
 			calculateSize();
 		}
 
